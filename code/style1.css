@@ -1,0 +1,42 @@
+*{
+  box-sizing: border-box ;  
+
+}
+
+#gridContainer>* {
+  border: 1px solid black;
+  margin:1px;
+  padding:5px;
+  
+}
+
+
+@media only screen and (min-width: 600px){
+
+#gridContainer {
+  display: grid;
+  grid-template-columns: 150px auto  ;
+  grid-template-rows:150px 500px ;
+  
+  
+   grid-template-areas: "menu header  "
+                        "menu content ";
+                        
+}
+#gridContainer>nav#menu{
+  text-align:center;
+  grid-area: menu;
+  background-color: red;
+}
+  #gridContainer>section#header {
+  grid-area: header;
+  
+ 
+}
+
+#gridContainer>section#content {
+  text-align: center;
+  grid-area: content;
+
+}
+}
