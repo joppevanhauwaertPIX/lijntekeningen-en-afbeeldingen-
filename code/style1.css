@@ -1,42 +1,194 @@
 *{
   box-sizing: border-box ;  
-
+ font-family: "Times New Roman", Times, serif;
 }
 
 #gridContainer>* {
   border: 1px solid black;
   margin:1px;
   padding:5px;
-  
 }
 
+#gridContainer2>* {
+  border: 1px solid black;
+  margin:1px;
+  padding:5px;
+}
+
+#gridContainer3>* {
+  border: 1px solid black;
+  margin:1px;
+  padding:5px;
+}
+
+ #gridContainer>section>img{
+   padding: 5px;
+   margin: 5px;
+   height: 287px;
+   width: 310px;
+}
+
+ #gridContainer2>section>img{
+   padding: 5px;
+   margin: 5px;
+   height: 287px;
+   width: 310px;
+}
+
+ #gridContainer3>section>img{
+   padding: 5px;
+   margin: 5px;
+   height: 287px;
+   width: 310px;
+}
+      
+body {
+  background-color: #dce5f2;
+}
+      
+nav>img {
+  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li>a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+li>a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: red;      
+}
+
+nav#menu{
+  background-color:red;
+  text-align: center;
+}
 
 @media only screen and (min-width: 600px){
-
 #gridContainer {
   display: grid;
-  grid-template-columns: 150px auto  ;
+  grid-template-columns: 1fr 5fr  ;
   grid-template-rows:150px 500px ;
   
   
    grid-template-areas: "menu header  "
                         "menu content ";
-                        
-}
+                        }
+
+
+
+
 #gridContainer>nav#menu{
   text-align:center;
   grid-area: menu;
   background-color: red;
 }
-  #gridContainer>section#header {
-  grid-area: header;
   
- 
+#gridContainer>section#header {
+  grid-area: header;   
 }
 
 #gridContainer>section#content {
   text-align: center;
   grid-area: content;
-
 }
+  }
+
+#gridContainer>section#aboutMe {
+  grid-area: aboutMe; 
+}
+
+#gridContainer>section#technicalSkills {
+  grid-area: technicalSkills;
+  background-color:red;  
+}
+
+#gridContainer>section#picture{
+    grid-area:picture;
+}
+
+#gridContainer>section#howMuchICharge {
+  grid-area: howMuchICharge; 
+}
+
+#gridContainer>section#contact {
+  grid-area: contact;
+  }
+}
+
+
+@media only screen and (min-width: 600px){
+#gridContainer2 {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows:auto 300px ;
+  
+   grid-template-areas: "menu aboutMe picture  "
+                        "menu technicalSkills ";
+  }
+
+#gridContainer2>nav#menu{
+  text-align:center;
+  grid-area: menu;
+  background-color: red;
+}
+  
+#gridContainer2>section#aboutMe {
+  grid-area: aboutMe; 
+}
+  
+#gridContainer2>section#picture {
+  grid-area: picture; 
+}
+  
+#gridContainer2>section#technicalSkills {
+  grid-area: technicalSkills;
+}
+  
+#gridContainer2>section#technicalSkills2 {
+  grid-area: technicalSkills2;
+  border-top: 1px solid lightblue;
+  }
+}
+
+@media only screen and (min-width: 600px){
+#gridContainer3 {
+  display: grid;
+  grid-template-columns: 1fr 5fr  ;
+  grid-template-rows: 400x 300px ;
+  
+   grid-template-areas: "menu howMuchICharge  "
+                        "menu contact ";                        
+}
+  
+#gridContainer3>nav#menu{
+  text-align:center;
+  grid-area: menu;
+  background-color: red;
+}
+  
+#gridContainer3>section#howMuchICharge {
+  grid-area: howMuchICharge;
+}
+
+#gridContainer3>section#contact {
+  grid-area: contact;
+  }
+  
 }
