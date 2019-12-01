@@ -1,45 +1,37 @@
 *{
   box-sizing: border-box ;  
- font-family: "Times New Roman", Times, serif;
+ font-family:Times, serif;
 }
 
-#gridContainer>* {
-  border: 1px solid black;
-  margin:1px;
-  padding:5px;
+#gridContainer1>* {
+  border: 1px solid none;
+  margin:5px;
+  padding:12px;
 }
 
 #gridContainer2>* {
-  border: 1px solid black;
-  margin:1px;
-  padding:5px;
+  border: 1px solid none;
+  margin:5px;
+  padding:12px;
 }
 
 #gridContainer3>* {
-  border: 1px solid black;
-  margin:1px;
-  padding:5px;
+  border: 1px solid none;
+  margin:5px;
+  padding:12px;
 }
 
- #gridContainer>section>img{
+#gridContainer2>section>img{
    padding: 5px;
    margin: 5px;
    height: 287px;
    width: 310px;
 }
-
- #gridContainer2>section>img{
-   padding: 5px;
-   margin: 5px;
-   height: 287px;
-   width: 310px;
-}
-
- #gridContainer3>section>img{
-   padding: 5px;
-   margin: 5px;
-   height: 287px;
-   width: 310px;
+#gridContainer1>section#content>img{
+  width: 310px;
+  height: 287px;
+  padding: 5px;
+  margin: 5px;
 }
       
 body {
@@ -61,27 +53,28 @@ ul {
 
 li>a {
   display: inline-block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 10px 10px;
   text-decoration: none;
 }
 
 li>a:hover {
-  background-color: #111;
+  background-color: #dce5f2;
 }
 
 .active {
-  background-color: red;      
+  background-color: white;      
 }
 
 nav#menu{
-  background-color:red;
+  background-color:white;
   text-align: center;
+  color: black;
 }
 
 @media only screen and (min-width: 600px){
-#gridContainer {
+#gridContainer1 {
   display: grid;
   grid-template-columns: 1fr 5fr  ;
   grid-template-rows:150px 500px ;
@@ -90,105 +83,96 @@ nav#menu{
    grid-template-areas: "menu header  "
                         "menu content ";
                         }
+}
 
 
 
 
-#gridContainer>nav#menu{
+#gridContainer1>nav#menu{
   text-align:center;
   grid-area: menu;
-  background-color: red;
+  background-color: white;
 }
   
-#gridContainer>section#header {
+#gridContainer1>section#header {
   grid-area: header;   
 }
 
-#gridContainer>section#content {
+#gridContainer1>section#content {
   text-align: center;
   grid-area: content;
 }
-  }
-
-#gridContainer>section#aboutMe {
-  grid-area: aboutMe; 
-}
-
-#gridContainer>section#technicalSkills {
-  grid-area: technicalSkills;
-  background-color:red;  
-}
-
-#gridContainer>section#picture{
-    grid-area:picture;
-}
-
-#gridContainer>section#howMuchICharge {
-  grid-area: howMuchICharge; 
-}
-
-#gridContainer>section#contact {
-  grid-area: contact;
-  }
-}
-
+  
 
 @media only screen and (min-width: 600px){
 #gridContainer2 {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows:auto 300px ;
+  grid-template-columns: 1fr 5fr  ;
+  grid-template-rows:170px 500px ;
   
-   grid-template-areas: "menu aboutMe picture  "
-                        "menu technicalSkills ";
+  
+   grid-template-areas: "menu aboutMe   "
+                        "menu technicalSkills  ";
+}
+  
+  section>img{
+    width: 270px;
+    height: 241px;
+    padding-bottom: 24px;
+    margin: 60px;
   }
+}
+section>img{
+    width: 270px;
+    height: 241px;
+    padding-bottom: 24px;
+    margin: 20px;
+}
 
 #gridContainer2>nav#menu{
   text-align:center;
   grid-area: menu;
-  background-color: red;
+  background-color: white;
 }
   
 #gridContainer2>section#aboutMe {
-  grid-area: aboutMe; 
+  grid-area: aboutMe;   
 }
-  
+
 #gridContainer2>section#picture {
-  grid-area: picture; 
+  text-align: center;
+  grid-area: picture;
 }
-  
 #gridContainer2>section#technicalSkills {
+  text-align: center;
   grid-area: technicalSkills;
-}
-  
-#gridContainer2>section#technicalSkills2 {
-  grid-area: technicalSkills2;
-  border-top: 1px solid lightblue;
-  }
 }
 
 @media only screen and (min-width: 600px){
 #gridContainer3 {
   display: grid;
   grid-template-columns: 1fr 5fr  ;
-  grid-template-rows: 400x 300px ;
+  grid-template-rows:150px 500px ;
+  
   
    grid-template-areas: "menu howMuchICharge  "
-                        "menu contact ";                        
+                        "menu contact ";
+  }
 }
-  
+
 #gridContainer3>nav#menu{
   text-align:center;
   grid-area: menu;
-  background-color: red;
+  background-color: white;
 }
   
 #gridContainer3>section#howMuchICharge {
-  grid-area: howMuchICharge;
+  grid-area: howMuchICharge;   
 }
 
-#gridContainer3>section#contact {
+#gridContainer>section#contact {
+  text-align: center;
   grid-area: contact;
-  }
-  
 }
+
+  
